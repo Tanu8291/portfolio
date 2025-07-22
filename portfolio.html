@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Adhav Tanuja Vitthal | Portfolio</title>
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+  <!-- AOS & Icons -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <style>
+    :root {
+      --primary-color: #1A1A2E;
+      --secondary-color: #16213E;
+      --accent-color: #0F3460;
+      --bg-color: #F0F0F5;
+      --text-color: #1A1A2E;
+      --dark-bg: #0F3460;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background: var(--bg-color);
+      color: var(--text-color);
+      display: flex;
+      min-height: 100vh;
+    }
+
+    .sidebar {
+      width: 300px;
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      color: white;
+      padding: 40px 20px;
+      position: fixed;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .sidebar img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 4px solid white;
+      object-fit: cover;
+      margin-bottom: 20px;
+    }
+
+    .sidebar h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 26px;
+      margin-bottom: 10px;
+    }
+
+    .sidebar p {
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      width: 100%;
+    }
+
+    nav ul li {
+      margin: 15px 0;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+      display: block;
+      padding: 10px;
+      transition: background 0.3s ease;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    nav ul li a:hover {
+      background: var(--accent-color);
+      border-radius: 5px;
+    }
+
+    .main-content {
+      margin-left: 300px;
+      padding: 40px 20px;
+      flex-grow: 1;
+    }
+
+    section {
+      margin-bottom: 60px;
+    }
+
+    section h2 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 30px;
+      color: var(--primary-color);
+      border-left: 5px solid var(--primary-color);
+      padding-left: 12px;
+      margin-bottom: 25px;
+    }
+
+    section p, section li {
+      font-size: 17px;
+      margin-top: 8px;
+    }
+
+    ul {
+      margin-left: 20px;
+    }
+
+    .project {
+      background: white;
+      border-radius: 12px;
+      padding: 25px;
+      margin-top: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+      border-left: 5px solid var(--primary-color);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project:hover {
+      transform: scale(1.03);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .resume-btn {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 12px 28px;
+      background: var(--accent-color);
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 30px;
+      font-size: 16px;
+      transition: background 0.3s ease;
+    }
+
+    .resume-btn:hover {
+      background: #3A6EA5;
+    }
+
+    footer {
+      background-color: var(--dark-bg);
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 15px;
+    }
+
+    .scroll-top-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: var(--primary-color);
+      color: white;
+      padding: 10px 14px;
+      border: none;
+      border-radius: 50%;
+      font-size: 18px;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-top: 10px;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        width: 100%;
+        position: static;
+        height: auto;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 20px;
+      }
+
+      .main-content {
+        margin-left: 0;
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="sidebar">
+    <img src="img/me.jpeg" alt="Photo of Adhav Tanuja Vitthal" />
+    <h1>Adhav Tanuja Vitthal</h1>
+    <p>Diploma Third Year IT Student</p>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#Experience">Experience</a></li>
+        <li><a href="#Education">Education</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="main-content">
+    <section id="about">
+      <h2>About Me</h2>
+      <p>👋 Hi! I’m Adhav Tanuja Vitthal, a dedicated IT student currently pursuing my Diploma (3rd Year) at Amrutvahini Polytechnic, Sangamner. I have a strong interest in software development and embedded systems. Currently I am taking Implant Training in PHN Technology in AI and Robotics which can lead to great future.</p>
+      <p>I enjoy working on innovative tech projects that blend hardware and software. I'm skilled in Python, C, Arduino, and tools like PyQt5, OpenCV, Pandas, and Tinkercad.</p>
+      <p>My recent projects include a 3D Object Detection App with Real-Time Area Calculation.</p>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li>Python Programming</li>
+        <li>Arduino with Tinkercad Simulation</li>
+        <li>C++ Language</li>
+        <li>C Language</li>
+        <li>Java Language</li>
+      </ul>
+    </section>
+
+    <section id="Experience">
+      <h2>Work Experience</h2>
+      <p><strong>2025 - Present</strong></p>
+      <p><strong>Implant Training, PHN Technology</strong></p>
+      <p>Learning AI, Robotics, Machine Learning, and Embedded Systems. Building real-time applications and projects with live hardware interfacing.</p>
+    </section>
+
+    <section id="Education">
+      <h2>Education</h2>
+      <p><strong>2022 - 2023</strong>: SSC with 91.60% – Dr. Babasaheb Ambedkar Madhyamik Vidyalay, Sonai</p>
+      <p><strong>2024 - 2025</strong>: 2nd Year Diploma in IT with 94.18% – Amrutvahini Polytechnic, Sangamner</p>
+      <p>Currently pursuing final year of Diploma.</p>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+
+      <div class="project">
+        <h3>3D Object Detection App</h3>
+        <p>A real-time 3D object detection application using Python, OpenCV, and PyQt5. Captures video from a webcam, detects objects, and calculates area in square centimeters using segmentation. GUI includes Start, Capture, Stop, and View options. Integrated with simulated sensor data from Tinkercad.</p>
+        <p><strong>Technologies:</strong> Python, OpenCV, PyQt5, NumPy, Tinkercad</p>
+        <img src="img/Screenshot 2025-07-04 002330.png" alt="App First Screen" />
+        <img src="img/Screenshot 2025-07-04 002418.png" alt="App Second Screen" />
+      </div>
+
+      <div class="project">
+        <h3>Weather Forecasting System</h3>
+        <p>Monitors real-time temperature and humidity using DHT11 sensor with Arduino and Tinkercad. Data is processed using Python and visualized with Pandas and Matplotlib for live forecasting and trend analysis.</p>
+        <p><strong>Technologies:</strong> Arduino, DHT11, Tinkercad, Python, Pandas</p>
+      </div>
+
+      <div class="project">
+        <h3>Gesture-Controlled Snake Game</h3>
+        <p>Control the classic Snake game using head gestures with OpenCV and a Teachable Machine TFLite model. Gestures like left, right, up, and down are recognized in real time to control the snake using only facial movements.</p>
+        <p><strong>Technologies:</strong> OpenCV, Teachable Machine, TFLite, Pygame</p>
+      </div>
+
+      <div class="project">
+        <h3>AR Floating Business Card</h3>
+        <p>An Augmented Reality digital business card that appears above an ArUco marker with animations, eye-blink, lip-sync voice output, and floating 3D design overlay using OpenCV.</p>
+        <p><strong>Technologies:</strong> OpenCV, ArUco, PyDub, Animation Tools</p>
+      </div>
+
+      <div class="project">
+        <h3>AR Inventory Management System</h3>
+        <p>Built using Flask and OpenCV, this system uses ArUco markers to identify items and add them to a cart. Includes login/signup, real-time location detection, and admin dashboard for inventory tracking.</p>
+        <p><strong>Technologies:</strong> Flask, OpenCV, SQLite, HTML/CSS</p>
+      </div>
+
+      <div class="project">
+        <h3>Holographic 3D Globe AR</h3>
+        <p>Displays a rotating 3D Earth model above an ArUco marker using OpenCV and OpenGL, simulating a holographic effect with real-time rendering.</p>
+        <p><strong>Technologies:</strong> OpenCV, OpenGL, Python, OBJ Model</p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:adhavtanuja.1928@gmail.com">adhavtanuja.1928@gmail.com</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/tanuja-adhav-633774372" target="_blank">tanuja-adhav-633774372</a></p>
+      <a href="img/Resume.pdf" class="resume-btn" download>Download Resume</a>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 Adhav Tanuja Vitthal. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" class="scroll-top-btn">↑</button>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
+</body>
+</html>
